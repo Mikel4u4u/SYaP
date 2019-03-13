@@ -1,0 +1,20 @@
+5. Определите функцию, которая увеличивает элементы исходного списка на единицу.
+
+(defun plus1 ( lst )
+  (cond ((null lst) nil)
+        ( ( atom  (car lst) ) ( cons  ( + ( car lst ) 1 )  ( plus1 ( cdr lst ) ) ) )
+        ( ( listp (car lst))  ( cons  ( plus1 ( car lst ) )    ( plus1 ( cdr lst ) )        )  )
+
+ ) )
+ 
+  Test case :
+1)
+Input : ( print  (plus1 '( 1 2 3 4 0 ) ) )
+Otput : (2 3 4 5 1)  
+2)
+Input : ( print  (plus1 '( ( 1 2 ) 3 4 0 ) ) )
+Otput : ((2 3) 4 5 1) 
+3)
+Input : ( print (plus1 '( 1 2 3  ((1 -2 3) (1 2 3)) )   ) )
+Otput : (2 3 4 ((2 -1 4) (2 3 4))) 
+ 
