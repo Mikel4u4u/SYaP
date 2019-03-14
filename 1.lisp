@@ -7,9 +7,9 @@
 
 
 
-; >  ( print (caddr '( 1 2 цель 3 4 ) ) )
-; >  ( print (cadadr '( (1) ( 2 цель ) ( 3 ( 4 ) ) ) ) )
-; >  ( print  (caddr ( cadadr '( 1 (2 ( 3 4 цель ) ) ) ) ) )
+;>  ( print (caddr '( 1 2 цель 3 4 ) ) )
+;>  ( print (cadadr '( (1) ( 2 цель ) ( 3 ( 4 ) ) ) ) )
+;>  ( print  (caddr ( cadadr '( 1 (2 ( 3 4 цель ) ) ) ) ) )
 
 
 ;ЦЕЛЬ 
