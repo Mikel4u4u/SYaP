@@ -2,10 +2,12 @@
 одинаковых элемента одним.
 
 (defun task (lst)
- (cond ((null (cdr lst)) lst)
-       ((equal (car lst) (cadr lst)) (cons (car lst) (task (cddr lst))))
-       (t (cons (car lst) (task (cdr lst))))))
-       
+  (( lambda ( x y )    
+        (cond ((null y) lst)
+             ((equal x (cadr lst)) (cons x (task (cddr lst))))
+             (t (cons x (task y )))))  
+  (car lst)  ( cdr lst )))   
+
  Test case :
 
 ;> ( print   (task '(a  a b b n  n n n)) )
