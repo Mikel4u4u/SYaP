@@ -7,8 +7,7 @@
         ((listp x) (cons (rep x w r) (rep y w r)))
         (t (cons x (rep y w r))))
              
-         (car lst) ( cdr lst ) )    
-       )  
+       )  (car lst) ( cdr lst ) ) 
  
  Test case :
 
