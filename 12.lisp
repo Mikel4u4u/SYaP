@@ -7,9 +7,9 @@
        (t (cons (car lst) (task (cdr lst))))))
        
  Test case :
-1)
-Input : ( print   (task '(a  a b b n  n n n)) )
-Otput : (A B N N) 
-2)
-Input : ( print   (task '(a   a ( b n ) ( b n )  n n n)) )
-Otput : (A (B N) N N) 
+
+;> ( print   (task '(a  a b b n  n n n)) )
+;> ( print   (task '(a   a ( b n ) ( b n )  n n n)) )
+
+;(A B N N) 
+;(A (B N) N N) 
