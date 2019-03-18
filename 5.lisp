@@ -1,20 +1,19 @@
 5.Определите функцию , которая увеличивет элеметы исходного списка на еденицу .
 
-(defun rep (lst w r)
-  ( ( lambda ( x y ) 
-  (cond ((null lst) nil)
-        (( eq x w) (cons r (rep y w r)))
-        ((listp x) (cons (rep x w r) (rep y w r)))
-        (t (cons x (rep y w r))))
-             
-       )  (car lst) ( cdr lst ) ) 
+(defun plus1 ( lst )
+     (( lambda ( x y ) 
+     (cond ((null lst) nil)
+        (( atom x)   ( cons  ( + x 1 )  ( plus1 y  )))
+        (( listp x)  ( cons  ( plus1 x )    ( plus1 y )))))            
+        (car lst)  ( cdr lst )      
+         ))
  
  Test case :
 
-;>( print (rep '(1 2 3 1 1) 1 'a) )
-;>( print (rep '((1 2 3) 4 5 6 1) 1 44) )
-;>( print (rep '( 1 2 3  ((1 2 3) (1 2 3)) )  1 '( 4 5 ) ) )
+;>( print  (plus1 '( 1 2 3 4 0 ) ) )
+;>( print  (plus1 '( ( 1 2 ) 3 4 0 ) ) )
+;>( print (plus1 '( 1 2 3  ((1 -2 3) (1 2 3)) )   ) )
 
-;(A 2 3 A A) 
-;((44 2 3) 4 5 6 44) 
-;((4 5) 2 3 (((4 5) 2 3) ((4 5) 2 3))) 
+;(2 3 4 5 1) 
+;((2 3) 4 5 1) 
+;(2 3 4 ((2 -1 4) (2 3 4))) 
