@@ -1,5 +1,23 @@
-10. Определите функцию, осуществляющую удаление указанного количества последних элементов исходного списка.
-(defun len(lst)(cond((null lst) 0)((+ 1 (len (cdr lst))))))(defun len-num(lst num)( set 'q    ( - ( len lst) num    ) )  (my-butlast lst q )    )(defun my-butlast(lst q)(cond(( <= q 0 ) NIL                )((< (len lst) q) NIL)((= (len lst) q) NIL)((> (len lst) q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 )) )   )))
+10. СњРїСЂРµРґРµР»РёС‚Рµ С„СѓРЅРєС†РёСЋ, РѕСЃСѓС‰РµСЃС‚РІР»В¤СЋС‰СѓСЋ СѓРґР°Р»РµРЅРёРµ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕСЃР»РµРґРЅРёС… СЌР»РµРјРµРЅС‚РѕРІ РёСЃС…РѕРґРЅРѕРіРѕ СЃРїРёСЃРєР°.
+
+(defun len(lst)
+(cond
+((null lst) 0)
+((+ 1 (len (cdr lst))))
+))
+
+(defun len-num(lst num)
+( set 'q    ( - ( len lst) num    ) )  
+(my-butlast lst q )    
+)
+
+(defun my-butlast(lst q)
+(cond
+(( <= q 0 ) NIL                )
+((< (len lst) q) NIL)
+((= (len lst) q) NIL)
+((> (len lst) q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 )) )   )
+))
 
  Test case :
 
