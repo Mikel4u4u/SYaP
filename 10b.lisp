@@ -12,12 +12,13 @@
 )
 
 (defun my-butlast(lst q)
+(( lambda ( x  )       
 (cond
 (( <= q 0 ) NIL                )
-((< (len lst) q) NIL)
-((= (len lst) q) NIL)
-((> (len lst) q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 )) )   )
-))
+((< x q) NIL)
+((= x q) NIL)
+((> x q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 )) )   )
+)) (len lst)))
 
  Test case :
 
