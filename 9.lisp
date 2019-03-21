@@ -1,20 +1,22 @@
 ;9. Определите фенкцию , разделяющую исходный список на два подсписка . В первый из них  должны попасть элементы с нечетными номерами , во 
 ;второй - элементы с четными номерами .
-(defun task (lst &optional (p nil) (n nil))
-	((lambda ( x y  )    
-		(cond       
-			((null (cdr lst))  ( list x  n  ))
-			((null (cddr lst)) ( list x  y  )) 
-			( t 
-			( task (cddr lst) x  y ))))          
-			(cons ( car lst )  p )  (cons (cadr lst) n)  ))
+(defun F ( L )
+    (if L
+        (list
+            (cons (car L)  (car (F (cddr L))))
+            (if (cadr L)
+                (cons (cadr L)   (cadr (F (cddr L))))
+            )
+        ) 
+    ) 
+)
 	
 ; Test case :
 
-;>( print (task '(1 2    )) )
-;>( print (task '(1 2 3 4 5 6   )) )
-;>( print (task '(1 2 3 4 5  ( 6 7 )   )) )
+;>( print (f '(1 2    )))
+;>( print (f '(1 2 3 4 5 6   )))
+;>( print (f '(1 2 3 4 5  6 7    )))
 
-;((1) (2))  
-;((5 3 1) (6 4 2)) 
-;((5 3 1) ((6 7) 4 2)) 
+;((1) (2)) 
+;((1 3 5) (2 4 6)) 
+;((1 3 5 7) (2 4 6)) 
