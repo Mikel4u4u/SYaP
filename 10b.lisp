@@ -19,7 +19,7 @@
             ((> x q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 ) ( - x 1 ))))
 ) )
 
- Test case :
+; Test case :
 
 ;>( print  (len-num '(1 2 3 4 5) 2 ) )
 ;>( print  (len-num '(1 2 3 4 5 65 ( q  4) ) 2 ) )
