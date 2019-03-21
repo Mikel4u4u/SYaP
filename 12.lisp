@@ -1,12 +1,13 @@
-12. Определите функцию, заменяющую в исходном списке два подряд идущих
-одинаковых элемента одним.
+;12. Определите функцию, заменяющую в исходном списке два подряд идущих
+;одинаковых элемента одним.
 
 (defun task (lst)
-  (( lambda ( x y )    
+  ((lambda ( x y )    
         (cond ((null y) lst)
              ((equal x (cadr lst)) (cons x (task (cddr lst))))
              (t (cons x (task y )))))  
-  (car lst)  ( cdr lst )))   
+  (car lst) 
+  (cdr lst )))   
 
  Test case :
 
