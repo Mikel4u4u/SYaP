@@ -9,7 +9,7 @@
   (car lst) 
   (cdr lst )))   
 
- Test case :
+; Test case :
 
 ;> ( print   (task '(a  a b b n  n n n)) )
 ;> ( print   (task '(a   a ( b n ) ( b n )  n n n)) )
