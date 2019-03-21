@@ -1,13 +1,14 @@
 3. Определите функцию, заменяющую в исходном списке все вхождения заданного значения другим.
 
 (defun rep (&key lst  w  r)
-    (( lambda ( x y )      
-             (cond ((null lst) nil)
-                (( eq x w) (cons r (rep :lst y  :w w  :r r)))
-                ((listp x) (cons (rep :lst x :w w  :r r) (rep :lst y :w w  :r r)))
-                (t (cons x (rep :lst y :w w  :r r)))))  
-        
-    (car lst) ( cdr lst ))) 
+    ((lambda ( x y )      
+            (cond   
+                    ((null lst) nil)
+                    (( eq x w) (cons r (rep :lst y  :w w  :r r)))
+                    ((listp x) (cons (rep :lst x :w w  :r r) (rep :lst y :w w  :r r)))
+                    (t (cons x (rep :lst y :w w  :r r)))))  
+    (car lst)
+    (cdr lst ))) 
  
  Test case :
 
