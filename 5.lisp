@@ -2,10 +2,11 @@
 
 (defun plus1 ( lst )
      (( lambda ( x y ) 
-     (cond ((null lst) nil)
-        (( atom x)   ( cons  ( + x 1 )  ( plus1 y  )))
-        (( listp x)  ( cons  ( plus1 x )    ( plus1 y )))))            
-        (car lst)  ( cdr lst )      
+               (cond ((null lst) nil)
+                    ((atom x)   (cons  ( + x 1 )( plus1 y)))
+                    ((listp x)  (cons  ( plus1 x )( plus1 y))))            
+     (car lst)
+     (cdr lst)      
          ))
  
  Test case :
