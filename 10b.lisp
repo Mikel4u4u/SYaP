@@ -7,18 +7,19 @@
 ))
 
 (defun len-num(lst num)
-( set 'q    ( - ( len lst) num    ) )  
-(my-butlast lst q )    
+( set 'q    ( - ( len lst) num))     
+(my-butlast lst q ( len lst)  )  
+
 )
 
-(defun my-butlast(lst q)
-(( lambda ( x  )       
+(defun my-butlast(lst q  x  )
+      
 (cond
-(( <= q 0 ) NIL                )
+(( <= q 0 ) NIL )
 ((< x q) NIL)
 ((= x q) NIL)
-((> x q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 )) )   )
-)) (len lst)))
+((> x q) (cons  (car lst)   ( my-butlast (cdr lst) (- q  1 ) ( - x 1 ))))
+) )
 
  Test case :
 
