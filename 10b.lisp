@@ -9,7 +9,7 @@
 (defun F (L N C)
     (if L
         (if (> C 0)
-            (cons (car L) (F (cdr L) N (1- C))))
+            (cons (car L) (F (cdr L) N (- C 1))))
     )
 )
 
