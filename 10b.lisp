@@ -6,15 +6,15 @@
         ((+ 1 (len (cdr lst))))
     ))
 
-(defun sfirst (Lst Num difNum)
+(defun sfirst (Lst  difNum)
     (if Lst
         (if (> difNum 0)
-            (cons (car Lst) (sfirst (cdr Lst) Num (- difNum 1))))
+            (cons (car Lst) (sfirst (cdr Lst)  (- difNum 1))))
     )
 )
 
 (defun dellast (Lst Num)
- (sfirst Lst Num (- (len Lst) Num)))
+ (sfirst Lst  (- (len Lst) Num)))
 
 
 
