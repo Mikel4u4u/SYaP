@@ -1,10 +1,10 @@
 ;31. Определите функцию (ПЕРВЫЙ-СОВПАДАЮЩИЙ х у), которая возвращает первый
 ;элемент, входящий в оба списка х и у, в противном случае NIL.
 
-(defun my-member (a w)
-  (cond ((null w) nil)
-        ((equalp a (car w)) (cons (car w) (cdr w)))
-        ((my-member a (cdr w)))))
+(defun my-member (atom1 lst)
+  (cond ((null lst) nil)
+        ((equalp atom1 (car lst)) (cons (car lst) (cdr lst)))
+        ((my-member atom1 (cdr lst)))))
     
 (defun first-common (l1 l2)
   (cond ((null l1) nil)
