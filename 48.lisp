@@ -1,4 +1,7 @@
 ;48.Напишите предикат (ИМЕЕТ-СВОЙСТВО символ свойство), который проверяет, обладает ли символ данным свойством.
+(defun ИМЕЕТ-СВОЙСТВО(x property)
+  (Искать-свойства property (symbol-plist x))
+)
 
 (defun Искать-свойства(property list)
     (cond
@@ -8,9 +11,7 @@
     )
 )
 
-(defun ИМЕЕТ-СВОЙСТВО(x property)
-  (Искать-свойства property (symbol-plist x))
-)
+
 
 
 (setf ( get 'apple 'color) 'red ) 
