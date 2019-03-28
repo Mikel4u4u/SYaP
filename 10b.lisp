@@ -6,15 +6,15 @@
         ((+ 1 (len (cdr lst))))
     ))
 
-(defun F (L N C)
-    (if L
-        (if (> C 0)
-            (cons (car L) (F (cdr L) N (- C 1))))
+(defun sfirst (Lst Num difNum)
+    (if Lst
+        (if (> difNum 0)
+            (cons (car Lst) (sfirst (cdr Lst) Num (- difNum 1))))
     )
 )
 
-(defun dellast (L N)
- (F L N (- (len L) N)))
+(defun dellast (Lst Num)
+ (sfirst Lst Num (- (len Lst) Num)))
 
 
 
