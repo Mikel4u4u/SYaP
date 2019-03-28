@@ -4,10 +4,10 @@
 (defun вычисли (lst )
     (eval ( pref2inf lst )))
 
-(defun pref2inf (m)
+(defun префинф (m)
    (cond ((null m) nil)
          ((atom m) m)
-         (t (list (pref2inf (cadr m)) (pref2inf (car m) ) (pref2inf (caddr m))))))
+         (t (list (префинф (cadr m)) (префинф (car m) ) (префинф (caddr m))))))
     
 
 (print  (вычисли '((-2 + 4 ) *  3 ))) ;=> 6
