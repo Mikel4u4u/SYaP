@@ -2,9 +2,7 @@
 ;символа.
 
 (defun удалить-все-свойства (a)
-  (loop
-      (when (null (symbol-plist a)) (return a))
-      (remprop a (car (symbol-plist a)))  ))
+    (setf   (symbol-plist a) nil ))
 
 
 (setf ( get 'apple 'color) 'red ) 
