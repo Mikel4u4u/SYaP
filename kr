@@ -1,0 +1,31 @@
+(defun raznost ( lst )
+ 
+
+  ( cond  
+      
+   ((null (cdr lst) ) T )    
+   ((oddp   ( - (cadr lst)  (car lst )))   ( raznost ( cdr lst ))) 
+
+   )
+     
+    
+ )
+   
+
+( print (raznost '(1 4 9 16 25 )))
+
+
+(defun raznost ( lst )
+ 
+
+  ( cond  
+      
+   ((null (cdr lst) ) T )    
+   ((oddp   ( - (cadr lst)  (car lst )))   ( raznost ( cdr lst ))) 
+
+   )
+     
+    
+ )
+
+( print (qwadratnat '(4 )))
