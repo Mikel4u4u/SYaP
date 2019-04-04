@@ -1,3 +1,5 @@
+;gnu clisp 2.49
+
 (defun raznost ( lst )
  
 
@@ -15,16 +17,14 @@
 ( print (raznost '(1 4 9 16 25 )))
 
 
-(defun raznost ( lst )
+(defun qwadratnat ( num )
  
-
-  ( cond  
-      
-   ((null (cdr lst) ) T )    
-   ((oddp   ( - (cadr lst)  (car lst )))   ( raznost ( cdr lst ))) 
-
-   )
-     
+    (cond
+      ((eq num 0) nil )
+     (t (      
+         cons  (- num 1 ) num
+         
+         ))
     
  )
 
