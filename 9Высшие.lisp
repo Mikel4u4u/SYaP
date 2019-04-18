@@ -24,3 +24,20 @@
 (next-fib)
  
 ==> 13
+
+(defun generator (&optional(a 0))
+    (let
+         ((numb a))
+     (lambda () (setq numb (+ numb 1)))
+     )
+    )
+(defun task1 ()
+   (if (> (random 10) 5 ) (print (list (funcall next-number1))) (print (funcall next-number2)) )
+
+
+)
+(setq  next-number1 (generator))
+(setq next-number2 (generator))
+
+( task1)
+( task1)
