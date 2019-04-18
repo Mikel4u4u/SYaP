@@ -1,20 +1,26 @@
 ;9. Напишите генератор порождения чисел Фибоначчи: 0, 1, 1, 2, 3, 5, ...
-(defun Fibon (num)
-  (if (< 0 num)
-      (append (Fibon (- num 1)) (list (Fib num)))
-   )
-)
-
-
-(defun Fib (num)
-    (cond
-        ((eq num 0 ) 0)
-        ((eq num 1 ) 1)
-        (t
-          (+ (Fib (- num 1) ) (Fib (- num 2) ) ) 
-         )
-    )
-)
+(let ((curr 1) (prev 0))
+  (defun next-fib  nil (let ((a curr)) (setq curr (+ curr prev) prev a)))
+  (defun reset-fib nil (setq curr 1 prev 0))) 
  
-(print ( Fibon 6) ) ;=> (1 1 2 3 5 8) 
-
+(next-fib)
+ 
+==> 1
+(next-fib)
+ 
+==> 1
+(next-fib)
+ 
+==> 2
+(next-fib)
+ 
+==> 3
+(next-fib)
+ 
+==> 5
+(next-fib)
+ 
+==> 8
+(next-fib)
+ 
+==> 13
