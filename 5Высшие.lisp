@@ -2,14 +2,7 @@
 ;являющейся функциональным аргументом предикат пред истинен хотя бы для одного элемента списка список.
 
 (defun mypred (func  args)
-             ( mysearch   (mapcar func args)))
-
-(defun mysearch (lst)
-    (cond
-       ((eq (car lst) T)  T)
-       ((eq (cdr lst) nil)  nil)
-       (t (mysearch (cdr lst )))
-    )   
+             (mapcan func args)   
 )
 
 
