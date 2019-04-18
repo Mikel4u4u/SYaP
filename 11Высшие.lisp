@@ -4,4 +4,4 @@
 
 (defun mnogofun (w x)
   (mapcar #' (lambda (f) (funcall f x)) w))
-(print (mnogofun '(sin cos) '0   )) ;=> (0 1) 
+(print (mnogofun '(sin cos zerop  atom) '0 )) ;=> (0 1) 
