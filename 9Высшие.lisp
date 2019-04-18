@@ -41,3 +41,25 @@
 
 ( task1)
 ( task1)
+
+
+
+(defun generator (&optional(a 0))
+    (let
+         ((numb 0))
+     (lambda () (setq numb (+ (generator (- numb 1   ) )    (generator  (- numb 2 )  )  ) ))
+     )
+    )
+
+(defun task1 ()
+  (print (funcall next-number2)) 
+
+
+)
+
+(setq next-number2 (generator))
+
+( task1)
+( task1)
+( task1)
+( task1)
