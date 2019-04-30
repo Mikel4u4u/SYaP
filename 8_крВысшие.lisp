@@ -9,11 +9,14 @@
 ))
 
 (defun maxpodsp(lst)
-   ;Максимальная дина подсписка
-   (set   'maxlen  (apply #' max (mapcar   #' len lst )))
-    
+
     ;Поиск подсписка с  максимальной диной
-   (mapcan #'(lambda (x) (if ( eq  ( len x ) maxlen )  x  )) lst )
+     ((lambda (y) (mapcan #'(lambda (x) (if 
+                                         ( eq  ( len x ) y )  x  )) 
+                             lst ))  
+      
+      
+      (apply #' max (mapcar   #' len lst ))    )
     
  )
 
