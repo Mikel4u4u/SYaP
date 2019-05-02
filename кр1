@@ -1,3 +1,15 @@
+;gnu clisp 2.49
+(defun multmatriz (A B)
+ (mapcar
+ #'(lambda (row)
+   (mapcar
+   #'(lambda (col)
+     (apply '+ (mapcar '* row col)))
+    (apply 'mapcar (cons 'list B))))
+  A))
+
+
+
 (defun plusmatiz ( lst1 lst2 )
      (cond
          ((null lst1) nil)
