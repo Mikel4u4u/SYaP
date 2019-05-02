@@ -1,7 +1,7 @@
 (defun sd (n m r)
-           (cond ((= m 1) (1+ r))
-                 ((zerop (mod n m)) (sd n (1- m) (+ m r)))
-                 ((sd n (1- m) r))
+           (cond ((= m 1) (+ r 1))
+                 ((zerop (mod n m)) (sd n (- m 1) (+ m r)))
+                 ((sd n (- m 1) r))
                ))
  
 
