@@ -5,28 +5,21 @@
                ))
  
 
-
-  (defun next-fib (curr)     
-        (if (= (* curr 2) (sd curr curr 0))  curr
-          )    
-    
-)       
-      
-(let ((curr 4) )   
-(defun generator  nil
-     
-
-     ( if (eq  ( next-fib curr) nil ) ( generator )  curr )
-    
-
-)  
+(let ((curr 1) )   
+  (defun next-fib nil    
+         (loop 
+             (incf curr )     
+             (if ( =  (* curr 2) (sd curr curr 0))
+                 (return curr ))
+          )  
+    )              
 ) 
  
  
-(print (generator))
-(print (generator))
-(print (generator))
-(print (generator))
+(print (next-fib))
+(print (next-fib))
+(print (next-fib))
+
 
 
 
