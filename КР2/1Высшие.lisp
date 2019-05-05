@@ -1,4 +1,5 @@
 ;gnu clisp 2.49
+;Умножение матриц
 (defun multmatriz (A B)
  (mapcar
  #'(lambda (row)
@@ -9,7 +10,7 @@
   A))
 
 
-
+;Сумма матриц
 (defun plusmatiz ( lst1 lst2 )
      (cond
          ((null lst1) nil)
