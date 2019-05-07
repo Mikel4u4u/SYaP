@@ -1,0 +1,22 @@
+mymaximum :: (Ord a) => [a] -> a
+mymaximum [x]     =  x
+mymaximum (x:xs)  =  max x (mymaximum xs)
+
+removeOdd :: [Integer] -> [Integer]
+removeOdd [] = []
+removeOdd (x:xs) = x : if (tail xs ) /= []   removeOdd (tail xs )
+
+
+accumSum n l = if l == []
+                  then n
+                  else let x = head l 
+                           xs = tail l 
+                           
+                       in  accumSum (n+x) xs
+                       
+main = do 
+print $ accumSum 0 [1 , 2 , 3 , 4] 
+print $ mymaximum  [1 , 2 , 3 , 4] 
+
+print $ removeOdd  [1 , 2 , 3 , 4 , 6, 6, 6, 7] 
+
