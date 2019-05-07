@@ -1,12 +1,13 @@
+;Реали�оват� на ��ыке Haskell функци� нахо�дени� максимал�ного элемента списка
 mymaximum :: (Ord a) => [a] -> a
 mymaximum [x]     =  x
 mymaximum (x:xs)  =  max x (mymaximum xs)
-
+;3. Реали�оват� на ��ыке Haskell функци�, удал��щу� и� исходного списка элементы с четными номерами.
 removeOdd :: [Integer] -> [Integer]
 removeOdd [] = []
 removeOdd (x:xs) = x : if (tail xs ) /= []   removeOdd (tail xs )
 
-
+;Реали�оват� на ��ыке Haskell функци� вычислени� суммы элементов списка.
 accumSum n l = if l == []
                   then n
                   else let x = head l 
