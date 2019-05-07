@@ -1,4 +1,4 @@
-;Реали�оват� на ��ыке Haskell функци� нахо�дени� максимал�ного элемента списка
+2. Реали�оват� на ��ыке Haskell функци� нахо�дени� максимал�ного элемента списка
 mymaximum :: (Ord a) => [a] -> a
 mymaximum [x]     =  x
 mymaximum (x:xs)  =  max x (mymaximum xs)
@@ -7,7 +7,7 @@ removeOdd :: [Integer] -> [Integer]
 removeOdd [] = []
 removeOdd (x:xs) = x : if (tail xs ) /= []   removeOdd (tail xs )
 
-;Реали�оват� на ��ыке Haskell функци� вычислени� суммы элементов списка.
+1. Реали�оват� на ��ыке Haskell функци� вычислени� суммы элементов списка.
 accumSum n l = if l == []
                   then n
                   else let x = head l 
