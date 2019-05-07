@@ -1,0 +1,10 @@
+2. Реали�оват� на ��ыке Haskell функци� нахо�дени� максимал�ного элемента списка
+mymaximum :: (Ord a) => [a] -> a
+mymaximum [x]     =  x
+mymaximum (x:xs)  =  max x (mymaximum xs)
+
+
+                       
+main = do 
+
+print $ mymaximum  [1 , 2 , 3 , 4]
