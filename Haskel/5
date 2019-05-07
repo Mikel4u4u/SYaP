@@ -1,0 +1,16 @@
+5. Реали�оват� на ��ыке Haskell функци�, �амен��щу� в исходном списке два подр�д идущих одинаковых
+элемента одним
+removeOdd :: [Integer] -> [Integer]
+removeOdd [] = []
+removeOdd (a:b:xs) = if a == b
+                 then
+                 b: (removeOdd xs )
+                 else
+                 a:b:(removeOdd xs )
+
+
+                       
+main = do 
+
+
+print $ removeOdd  [1 , 1 , 3 , 3 , 6, 6, 6, 7]   ;[1,3,6,6,7]
