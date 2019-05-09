@@ -3,7 +3,7 @@
 f :: [Integer] -> Integer
 
 
-f (x) = foldr (+) 0 x
+f (x) = foldl1 (+)  x
 
 main = print $ f [1 , 2 , 3 , 4 , 5 , 6 ]
 
