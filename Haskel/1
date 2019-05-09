@@ -1,10 +1,10 @@
 1. Реали�оват� на ��ыке Haskell функци� вычислени� суммы элементов списка.
-accumSum n l = if l == []
-                  then n
-                  else let x = head l 
-                           xs = tail l 
-                           
-                       in  accumSum (n+x) xs
-                       
-main = do 
-print $ accumSum 0 [1 , 2 , 3 , 4] 
+
+f :: [Integer] -> Integer
+
+
+f (x) = foldr (+) 0 x
+
+main = print $ f [1 , 2 , 3 , 4 , 5 , 6 ]
+
+;21
