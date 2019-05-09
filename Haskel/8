@@ -6,3 +6,11 @@ f [a] = [a+1]
 f (a:t) = a+1 :f t
 main = print $ f [1 , 2 , 3 , 4 , 5 ]
 ;[2,3,4,5,6]
+
+
+
+incr a = a + 1
+f :: [Integer] -> [Integer]
+f (t) = map incr  t
+main = print $ f [1 , 2 , 3 , 4 , 5 ]
+;[2,3,4,5,6]
