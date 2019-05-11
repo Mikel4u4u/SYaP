@@ -1,0 +1,11 @@
+;7. Реали�оват� на ��ыке Haskell функци�, �амен��щу� в исходном списке все вхо�дени� �аданного �начени� другим.
+
+f :: Integer -> Integer -> [Integer] -> [Integer] 
+
+f z x [ ] = [ ]
+f z x (a:t) = if a == z
+             then
+            [x] ++ f z x  t 
+             else
+            [a] ++ f z x  t
+main = print $ f 2 3 [2 , 2 , 3 , 4 , 5 ]
