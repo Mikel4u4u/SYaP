@@ -7,3 +7,9 @@ f (a:t) = a*10 :f t
 main = print $ f [1 , 2 , 3 , 4 , 5 ]
 
 --[10,20,30,40,50]
+
+f :: [Integer] -> [Integer]
+f (t) = map  (* 10 )  t
+main = print $ f [1 , 2 , 3 , 4 , 5 ]
+
+--[10,20,30,40,50]
