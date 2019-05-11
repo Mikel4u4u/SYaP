@@ -9,8 +9,7 @@ main = print $ f [1 , 2 , 3 , 4 , 5 ]
 
 
 
-incr a = a + 1
 f :: [Integer] -> [Integer]
-f (t) = map incr  t
+f (t) = map  (+ 1 )  t
 main = print $ f [1 , 2 , 3 , 4 , 5 ]
 --[2,3,4,5,6]
