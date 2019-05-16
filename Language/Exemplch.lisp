@@ -1,4 +1,4 @@
-(require "./2.lisp")
+(require "./Chemestry.lisp")
 ;Химическая реакция
 (Химия  хим_реакция (Mg 1 OH 2 ) + (H 2 SO4 1)) 
 ;((MG 1 OH 2) + (H 2 SO4 1) -> (MG 2 SO4 2) + (H 1 OH 1))
